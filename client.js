@@ -15,15 +15,18 @@ conn.on("connect", () => {
 
 });
 
+conn.on( "connect", () => {
+  console.log("Successfully connected to game server");
+  conn.write('Name: IB');
+});
+
 conn.on('data', (data) => {
   console.log(data.toString());
-  conn.end();
 });
 
 return conn;
 };
-connect();
 
 module.exports = {
-  connect()
+  connect,
 };

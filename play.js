@@ -1,4 +1,2 @@
-const net = require("net");
-const server = net.createServer();    
-
-const connect = require("./client.js");
+ const connect = require("./client.js").connect;
+ connect();
