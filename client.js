@@ -18,6 +18,9 @@ conn.on("connect", () => {
 conn.on( "connect", () => {
   console.log("Successfully connected to game server");
   conn.write('Name: IB');
+  // conn.write('Move: up');
+
+  setInterval(()=>{conn.write('Move: up')}, 1000)
 });
 
 conn.on('data', (data) => {
